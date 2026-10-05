@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BeautyCare - веб-приложение косметологической клиники для записи клиентов.">
+    <title>BeautyCare - косметология</title>
+    <link rel="icon" href="logo.jpg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+    <figure>
+        <img src="logo.jpg" class="logo" alt="BeautyCare" width="80" height="80">
+        <span>
+            <strong>BeautyCare - красота и уход</strong>
+        </span>
+      </figure>
+    <nav>        
+        <a href="#about">О нас</a>
+        <a href="#services">Услуги</a>
+        <a href="#works">Наши работы</a>
+        <a href="#appointment">Записаться</a>
+        <a href="#reviews">Отзывы</a>
+     </nav>
+     <btn class="theme-toggle" onclick="document.body.classList.toggle('dark')">☾ Тема</btn>
+    </header>
+
+  <main>    
+    <section class="hero" id="about">
+            <article>
+                <p class="subtitle">КОСМЕТОЛОГИЯ • УХОД ЗА КОЖЕЙ</p>
+                <h1>Красота начинается с заботы о себе</h1>
+                <p>Профессиональный уход за кожей лица, индивидуальный подход и время для вашей красоты.</p>
+                <a href="#appointment" class="btn">Записаться на процедуру</a>
+            </article>
+        </section>
+        <section class="layout about">
+            <aside class="sidebar">
+                <h2>О нас</h2>
+                <p>Мы помогаем подобрать уход, учитывая особенности и потребности вашей кожи.</p>
+                <ul>
+                    <li>Индивидуальный подход</li>
+                    <li>Консультация по уходу</li>
+                    <li>Комфортная атмосфера</li>
+                    <li>Профессиональная косметика</li>
+                </ul>
+            </aside>
+
+            <article class="content">
+                <h2>Ваша кожа заслуживает заботы</h2>
+                <p>В кабинете косметолога вы сможете уделить время себе, подобрать домашний уход и познакомиться с процедурами, подходящими вашему типу кожи.
+                </p>
+                <section class="benefits">
+                    <article>
+                        <span class="benefit-icon">♡</span>
+                        <h3>Забота</h3>
+                        <p>Бережный подход к каждому клиенту.</p>
+                    </article>
+
+                    <article>
+                        <span class="benefit-icon">✿</span>
+                        <h3>Комфорт</h3>
+                        <p>Спокойная атмосфера и внимание к деталям.</p>
+                    </article>
+
+                    <article>
+                        <span class="benefit-icon">✧</span>
+                        <h3>Индивидуальность</h3>
+                        <p>Подбор ухода с учётом особенностей кожи.</p>
+                    </article>
+                </section>
+            </article>
+        </section>
+
+    <section class="services" id="services">
+            <header class="section-header">
+                <p class="subtitle">BEAUTY & CARE</p>
+                <h2>Популярные процедуры</h2>
+                <p>Выберите уход, который подходит именно вам</p>
+            </header>
+            <div class="filters">
+    <button class="filter-btn active" data-filter="all">Все</button>
+    <button class="filter-btn" data-filter="work">Уход</button>
+    <button class="filter-btn" data-filter="study">Массаж</button>
+    <button class="filter-btn" data-filter="personal">Консультации</button>
+</div>
+<p class="filter-count">Показано: <span id="filterCount">0</span></p>
+
+    <section class="cards">
+                <article class="card" data-category="work">
+                    <span class="badge">Популярное</span>
+                    <img src="card1.jpg" alt="Уход за кожей лица">
+                    <section class="card-info">
+                        <h3>Уход за лицом</h3>
+                        <p>Комплексный уход для увлажнения и свежего вида кожи.</p>
+                        <p class="price">от 2 500 ₽</p>
+                        <label class="fav">
+                            <input type="checkbox">
+                            <span>В избранное</span>
+                        </label>
+                        <a href="#appointment" class="btn">Записаться</a>
+                    </section>
+                </article>
+
+                <article class="card" data-category="work">
+                    <span class="badge">NEW</span>
+                    <img src="card2.jpg" alt="Профессиональная чистка лица">
+                    <section class="card-info">
+                        <h3>Чистка лица</h3>
+                        <p>Процедура очищения кожи с учётом её состояния.</p>
+                        <p class="price">от 3 000 ₽</p>
+                        <label class="fav">
+                            <input type="checkbox">
+                            <span>В избранное</span>
+                        </label>
+                        <a href="#appointment" class="btn">Записаться</a>
+                    </section>
+                </article>
+
+                <article class="card" data-category="work">
+                    <img src="card3.jpg"
+                         alt="Средства для увлажнения кожи">
+                    <section class="card-info">
+                        <h3>Увлажнение кожи</h3>
+                        <p>Уход для поддержания мягкости и комфорта кожи.</p>
+                        <p class="price">от 2 000 ₽</p>
+                        <label class="fav">
+                            <input type="checkbox">
+                            <span>В избранное</span>
+                        </label>
+                        <a href="#appointment" class="btn">Записаться</a>
+                    </section>
+                </article>
+
+                <article class="card" data-category="study">
+                    <img src="card4.jpg"
+                         alt="Косметический уход">
+                    <section class="card-info">
+                        <h3>Массаж лица</h3>
+                        <p>Расслабляющая процедура для приятного ощущения ухода.</p>
+                        <p class="price">от 1 800 ₽</p>
+                        <label class="fav">
+                            <input type="checkbox">
+                            <span>В избранное</span>
+                        </label>
+                        <a href="#appointment" class="btn">Записаться</a>
+                    </section>
+                </article>
+
+                <article class="card" data-category="personal">
+                    <img src="card5.jpg"
+                         alt="Профессиональный уход за лицом">
+                    <section class="card-info">
+                        <h3>Консультация</h3>
+                        <p>Разбор потребностей кожи и рекомендации по домашнему уходу.</p>
+                        <p class="price">от 1 000 ₽</p>
+                        <label class="fav">
+                            <input type="checkbox">
+                            <span>В избранное</span>
+                        </label>
+                        <a href="#appointment" class="btn">Записаться</a>
+                    </section>
+                </article>
+
+                <article class="card" data-category="work">
+                    <img src="card6.jpg"
+                         alt="Ритуал красоты">
+                    <section class="card-info">
+                        <h3>SPA-уход</h3>
+                        <p>Время для отдыха, расслабления и заботы о себе.</p>
+                        <p class="price">от 3 500 ₽</p>
+                        <label class="fav">
+                            <input type="checkbox">
+                            <span>В избранное</span>
+                        </label>
+                        <a href="#appointment" class="btn">Записаться</a>
+                    </section>
+                </article>
+
+            </section>
+        </section>
+<section class="works" id="works">
+    <header class="works-header">
+        <h2>Наши работы</h2>
+        <p>Примеры процедур и результатов</p>
+        <p>ДО/ПОСЛЕ</p>
+    </header>
+
+    <article class="work-card">
+        <img src="3.jpg"
+             alt="Уход за кожей лица">
+        <h3>Уход за кожей лица</h3>
+        <p>Увлажнение и восстановление кожи.</p>
+    </article>
+
+    <article class="work-card">
+        <img src="1.jpg"
+             alt="Чистка лица">
+        <h3>Чистка лица</h3>
+        <p>Деликатное очищение и уход за кожей.</p>
+    </article>
+
+    <article class="work-card">
+        <img src="2.jpg"
+             alt="Массаж лица">
+        <h3>Массаж лица</h3>
+        <p>Расслабление и улучшение тонуса кожи.</p>
+    </article>
+
+    <article class="work-card">
+        <img src="4.jpg"
+             alt="Увлажнение кожи">
+        <h3>Увлажнение кожи</h3>
+        <p>Глубокое увлажнение и сияние кожи.</p>
+    </article>
+</section>
+
+    <section class="appointment" id="appointment">
+            <article>
+                <header class="section-header">
+                    <p class="subtitle">БУДЕМ РАДЫ ВАС ВИДЕТЬ</p>
+                    <h2>Запись на процедуру</h2>
+                    <p>Оставьте заявку, и мы свяжемся с вами.</p>
+                </header>
+                <form action="#" method="get">
+                    <label for="name">Ваше имя</label>
+                    <input type="text" id="name" name="name" placeholder="Как к вам обращаться?" required>
+                    <label for="phone">Номер телефона</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__" required>
+                    <label for="procedure">Выберите процедуру</label>
+                    <select id="procedure" name="procedure" required>
+                        <option value="">Выберите услугу</option>
+                        <option>Уход за лицом</option>
+                        <option>Чистка лица</option>
+                        <option>Увлажнение кожи</option>
+                        <option>Массаж лица</option>
+                        <option>Консультация</option>
+                        <option>SPA-уход</option>
+                    </select>
+                    <label for="message">Комментарий</label>
+                    <textarea id="message" name="message" rows="4"
+                              placeholder="Удобное время и ваши пожелания"></textarea>
+
+                    <button type="submit" class="btn">Отправить заявку</button>
+                </form>
+            </article>
+        </section>
+<section class="reviews" id="reviews">
+  <header class="reviews__header">
+    <span class="reviews__label">Отзывы клиентов</span>
+    <h2 class="reviews__title">Что говорят о нас</h2>
+    <p class="reviews__subtitle">Нам важно мнение наших клиентов.</p>
+  </header>
+
+  <section class="reviews__list">
+
+    <article class="review">
+      <figure class="review__author">
+        <img class="review__avatar" src="a2.jpg" alt="Анна Кузнецова">
+        <figcaption>
+          <h3>Анна Кузнецова</h3>
+          <span>Клиент</span>
+        </figcaption>
+      </figure>
+      <p class="review__rating" aria-label="5 из 5">★★★★★</p>
+
+      <p class="review__text">
+        Отличный сервис! Всё сделали быстро, качественно и без лишних
+        вопросов. Осталась очень довольна результатом.
+      </p>
+
+      <time class="review__date" datetime="2026-09-12">
+        12 сентября 2026
+      </time>
+    </article>
+
+    <article class="review">
+      <figure class="review__author">
+        <img
+          class="review__avatar"
+          src="a1.jpg"
+          alt="Максим Петров"
+        >
+
+        <figcaption>
+          <h3>Максим Петров</h3>
+          <span>Клиент</span>
+        </figcaption>
+      </figure>
+
+      <p class="review__rating" aria-label="5 из 5">
+        ★★★★★
+      </p>
+
+      <p class="review__text">
+        Очень понравился подход к работе. Всё понятно объяснили,
+        оперативно отвечали на вопросы. Однозначно рекомендую.
+      </p>
+
+      <time class="review__date" datetime="2026-09-05">
+        5 сентября 2026
+      </time>
+    </article>
+
+    <article class="review">
+      <figure class="review__author">
+        <img
+          class="review__avatar"
+          src="a3.jpg"
+          alt="Елена Волкова"
+        >
+
+        <figcaption>
+          <h3>Елена Волкова</h3>
+          <span>Клиент</span>
+        </figcaption>
+      </figure>
+
+      <p class="review__rating" aria-label="5 из 5">
+        ★★★★★
+      </p>
+
+      <p class="review__text">
+        Спасибо за прекрасную работу! Результат полностью оправдал
+        мои ожидания. Буду обращаться ещё.
+      </p>
+
+      <time class="review__date" datetime="2026-08-28">
+        28 августа 2026
+      </time>
+    </article>
+
+  </section>
+</section>
+<footer>
+        <section>
+            <a href="#top" class="footer-logo">BeautyCare</a>
+            <p>Красота в деталях. Забота в каждом прикосновении.</p>
+            <p>© 2026 BeautyCare. Все права защищены.</p>
+        </section>
+    </footer>
+   <button class="scroll-top" id="scrollTopBtn" aria-label="Наверх">
+    ↑
+</button>
+
+    <script>
+    const btn = document.querySelector('.scroll-top');
+    window.addEventListener('scroll', () => {
+        btn.style.opacity = window.scrollY > 300 ? '1' : '0';
+        btn.style.pointerEvents = window.scrollY > 300 ? 'auto' : 'none';
+    });
+</script> 
+<script src="script.js"></script>
+</body>
+</html>
